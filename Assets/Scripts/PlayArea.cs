@@ -36,8 +36,6 @@ public class PlayArea : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
   public void Validate()
   {
     IsValid = true;
-    Debug.Log(descriptionText);
-    Debug.Log(descriptionText.gameObject);
     descriptionText.gameObject.SetActive(true);
     image.DOFade(0.25f, 0.25f);
   }

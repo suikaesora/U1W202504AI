@@ -1,4 +1,6 @@
+using Cysharp.Threading.Tasks;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Battle
@@ -53,7 +55,17 @@ public class Battle
 
     SetTurn(Turns.Player);
 
-    AudioManager.Instance.PlayBgm("battle");
+    AudioManager.Instance.PlayBgm("battle_intro");
+    AudioManager.Instance.SetLoop(false);
+    _ = BGMTask(new CancellationTokenSource().Token);
+  }
+
+  private async UniTask BGMTask(CancellationToken ct)
+  {
+    AudioSource audio = AudioManager.Instance.CurrenBgmSource;
+    await UniTask.WaitUntil(() => audio.clip.length - audio.time < 0.5f, cancellationToken: ct);
+    AudioManager.Instance.SetLoop(true);
+    AudioManager.Instance.PlayBgm("battle", 0.5f, AudioManager.Instance.DefaultVolumeBgm);
   }
 
   public void SetEnergy(int value)

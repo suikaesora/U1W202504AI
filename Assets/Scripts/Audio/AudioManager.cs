@@ -39,6 +39,10 @@ public class AudioManager : MonoBehaviour
 
   private Tween[] _currentBgmTweens;
 
+  public float DefaultVolumeBgm => _defaultVolumeBgm;
+
+  public AudioSource CurrenBgmSource => _currentBgmSource;
+
   private void Awake()
   {
     if (Instance)
@@ -182,5 +186,10 @@ public class AudioManager : MonoBehaviour
     {
       source.volume = _defaultVolumeSe;
     }
+  }
+
+  public void SetLoop(bool isLoop)
+  {
+    _currentBgmSource.loop = isLoop;
   }
 }

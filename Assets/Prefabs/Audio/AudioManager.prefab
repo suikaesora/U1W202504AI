@@ -65,7 +65,7 @@ MonoBehaviour:
   - Id: title
     Clip: {fileID: 8300000, guid: ecf9421519d3fd04c92710d0ad480877, type: 3}
   - Id: battle
-    Clip: {fileID: 8300000, guid: 40781a3847082094182731832c8b5fb4, type: 3}
+    Clip: {fileID: 8300000, guid: db83f7b1b413c57439bc8fdb57f41fe5, type: 3}
   - Id: card_get
     Clip: {fileID: 8300000, guid: fbc453e14cc46204ca565f981526a624, type: 3}
   - Id: card_play
@@ -96,6 +96,8 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: 458c0375d2027e142a6c128660f1c991, type: 3}
   - Id: destroy
     Clip: {fileID: 8300000, guid: c7dce134f477b01419882d36397156f7, type: 3}
+  - Id: battle_intro
+    Clip: {fileID: 8300000, guid: 28d2f1dbe28ad6c4e9b1afcae5b4c377, type: 3}
 --- !u!82 &556833902708127827
 AudioSource:
   m_ObjectHideFlags: 0
@@ -204,7 +206,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
