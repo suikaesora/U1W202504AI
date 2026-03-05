@@ -63,7 +63,7 @@ MonoBehaviour:
   - {fileID: 438916515506964183}
   _clipItems:
   - Id: title
-    Clip: {fileID: 8300000, guid: ecf9421519d3fd04c92710d0ad480877, type: 3}
+    Clip: {fileID: 8300000, guid: 36e74cc7719e0e44180ec9dbc5b21afe, type: 3}
   - Id: battle
     Clip: {fileID: 8300000, guid: db83f7b1b413c57439bc8fdb57f41fe5, type: 3}
   - Id: card_get
